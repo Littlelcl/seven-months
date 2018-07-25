@@ -5,40 +5,79 @@
     <meta name="keywords" content="三国杀,三国杀online,三国游戏,桌游,卡牌游戏,杀人游戏,sgs" />
     <meta name="description" content="三国杀是一款风靡中国的智力卡牌桌游，以三国为背景、以身份为线索、以武将为角色，构建起一个集历史、文学、美术、游戏等元素于一身的桌面游戏世界，已经推出PC版、手机版等产品。 " />
     <title>电脑租赁服务平台</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/auth/base.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/auth/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/index/auth/base.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/index/auth/style.css') }}">
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="bookmark" href="favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 <div class="wrap-login">
-    <div class="login-top">电脑租赁服务平台</div>
+    <div class="login-top">七月放飞自我</div>
     <div class="login" id="login">
-        <h3 class="login-title">电脑租赁服务平台</h3>
+        <h3 class="login-title">用户登录</h3>
         <form id="form1" name="form1" method="post" action="" autocomplete="off">
             <div class="login-list">
                 <label for="textfield" class="default-text">输入账号</label>
-                <input type="text" name="textfield" id="textfield" class="default-input"/>
+                <input type="text" name="textfield"  class="default-input"/>
                 <span class="checktip"></span>
             </div>
             <div class="login-list">
                 <label for="textfield2" class="default-text">密码</label>
-                <input type="password" name="textfield2" id="textfield2" class="default-input"/>
+                <input type="password" name="textfield2"  class="default-input"/>
                 <span class="checktip"></span>
             </div>
             <div class="login-more">
                 <div class="login-auto">
-                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <input type="checkbox" name="checkbox"  />
                     <label for="checkbox">自动登录</label>
-                </div>
-                <div class="login-forget">
-                    <a href="Pwd-step1.html">忘记密码?</a>
                 </div>
             </div>
             <div>
-                <input type="submit" name="button" id="button" value="登录" class="submit-input"/>
+                <input type="submit" name="button"  value="登录" class="submit-input"/>
             </div>
-            <div class="no-user">还没有账户？<a href="register.html">立即注册</a></div>
+            <div class="no-user">还没有账户？<a href="javascript:;" class="js-register">立即注册</a></div>
+        </form>
+    </div>
+    <div class="login hide" id="register">
+        <h3 class="login-title">用户注册</h3>
+        <form id="form2" name="form1" method="post" action="" autocomplete="off">
+            <div class="login-list">
+                <label for="textfield" class="default-text">请输入11位手机号</label>
+                <input type="text" name="textfield" id="textfield" class="default-input"/>
+                <span class="checktip"></span>
+            </div>
+            <div class="login-list">
+                <label for="textfield2" class="default-text">请输入验证码</label>
+                <input type="text" name="textfield2" id="textfield2" class="default-input w220"/>
+                <input type="submit" name="button2" id="button2" value="获取验证码" class="reg-code"/>
+                <!--<input type="submit" name="button2" id="button2" value="获取验证码" class="reg-code no-code"/>-->
+                <span class="checktip"></span>
+            </div>
+            <div class="login-list">
+                <label for="textfield3" class="default-text">真实姓名</label>
+                <input type="text" name="textfield3" id="textfield3" class="default-input"/>
+                <span class="checktip"></span>
+            </div>
+            <div class="login-list">
+                <label for="textfield4" class="default-text">对应身份证号码</label>
+                <input type="text" name="textfield4" id="textfield4" class="default-input"/>
+                <span class="checktip"></span>
+            </div>
+            <div class="login-list">
+                <label for="textfield5" class="default-text">请输入登录密码</label>
+                <input type="password" name="textfield5" id="textfield5" class="default-input"/>
+                <span class="checktip"></span>
+            </div>
+            <div class="login-more">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <label for="checkbox"></label>
+                我已阅读并同意 <a href="#" target="_blank" class="c-blue">《电脑租赁平台注册协议》</a>
+            </div>
+            <div class="tc">
+                <a href="javascript:;" class="submit-input sign-btn">注册</a>
+                <!--<input type="submit" name="button" id="button" value="注册" class="submit-input sign-btn"/>-->
+            </div>
+            <div class="no-user">已有账号？<a href="javascript:;" class="js-login">立即登录</a></div>
         </form>
     </div>
 </div>

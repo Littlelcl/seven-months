@@ -14,6 +14,12 @@ return [
     |
     */
 
+    'phone' => [
+        'url' => env('PHONE_URL'),
+        'key' => env('PHONE_KEY'),
+        'app_key' => env('PHONE_APP_KEY')
+    ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),

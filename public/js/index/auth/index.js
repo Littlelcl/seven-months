@@ -80,3 +80,16 @@ $(".add-ba p").on("click","input",function(){
 	   $(".add-others").addClass("hide");
 		} 
  });
+
+$(".js-register").on('click', function(){
+    $("#login").addClass('hide');
+    $("#register").removeClass('hide');
+    popup($("#register"))
+})
+
+$(".js-login").on('click', function(){
+    console.log('fff');
+    $("#register").addClass('hide');
+    $("#login").removeClass('hide');
+    popup($("#login"))
+})

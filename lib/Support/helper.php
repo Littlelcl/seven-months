@@ -7,7 +7,7 @@
  */
 
 if (!function_exists('jsonReturn')){
-    function jsonReturn($code_msg, $data, $extralMsg)
+    function jsonReturn($code_msg, $data = [], $extralMsg = '')
     {
         $code_msg = explode('|', $code_msg);
         $msg = $extralMsg ?: $code_msg[1];

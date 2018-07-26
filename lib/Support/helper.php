@@ -5,6 +5,7 @@
  * Date: 2018/7/24
  * Time: 14:23
  */
+use Illuminate\Container\Container;
 
 if (!function_exists('jsonReturn')){
     function jsonReturn($code_msg, $data = [], $extralMsg = '')

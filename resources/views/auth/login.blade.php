@@ -18,19 +18,13 @@
         <form id="form1" name="form1" method="post" action="" autocomplete="off">
             <div class="login-list">
                 <label for="textfield" class="default-text">输入账号</label>
-                <input type="text" name="textfield"  class="default-input"/>
+                <input type="text" name="phone"  class="default-input"/>
                 <span class="checktip"></span>
             </div>
             <div class="login-list">
                 <label for="textfield2" class="default-text">密码</label>
-                <input type="password" name="textfield2"  class="default-input"/>
+                <input type="password" name="password"  class="default-input"/>
                 <span class="checktip"></span>
-            </div>
-            <div class="login-more">
-                <div class="login-auto">
-                    <input type="checkbox" name="checkbox"  />
-                    <label for="checkbox">自动登录</label>
-                </div>
             </div>
             <div>
                 <input type="submit" name="button"  value="登录" class="submit-input"/>
@@ -42,30 +36,30 @@
         <h3 class="login-title">用户注册</h3>
         <form id="form2" name="form1" method="post" action="" autocomplete="off">
             <div class="login-list">
-                <label for="textfield" class="default-text">请输入11位手机号</label>
-                <input type="text" name="textfield" id="textfield" class="default-input"/>
+                <label for="textfield" class="default-text">手机号</label>
+                <input type="text" name="phone" id="textfield" class="default-input"/>
                 <span class="checktip"></span>
             </div>
             <div class="login-list">
                 <label for="textfield2" class="default-text">请输入验证码</label>
-                <input type="text" name="textfield2" id="textfield2" class="default-input w220"/>
-                <input type="submit" name="button2" id="button2" value="获取验证码" class="reg-code"/>
+                <input type="text" id="textfield2" class="default-input w220"/>
+                <input type="button" id="button2" value="获取验证码" class="reg-code"/>
                 <!--<input type="submit" name="button2" id="button2" value="获取验证码" class="reg-code no-code"/>-->
                 <span class="checktip"></span>
             </div>
             <div class="login-list">
-                <label for="textfield3" class="default-text">真实姓名</label>
-                <input type="text" name="textfield3" id="textfield3" class="default-input"/>
+                <label for="textfield3" class="default-text">昵称</label>
+                <input type="text" name="nickname" id="textfield3" class="default-input"/>
                 <span class="checktip"></span>
             </div>
             <div class="login-list">
-                <label for="textfield4" class="default-text">对应身份证号码</label>
-                <input type="text" name="textfield4" id="textfield4" class="default-input"/>
+                <label for="textfield4" class="default-text">密码</label>
+                <input type="text" name="password" id="textfield4" class="default-input"/>
                 <span class="checktip"></span>
             </div>
             <div class="login-list">
-                <label for="textfield5" class="default-text">请输入登录密码</label>
-                <input type="password" name="textfield5" id="textfield5" class="default-input"/>
+                <label for="textfield5" class="default-text">再次输入密码</label>
+                <input type="password" name="comfirm_password" id="textfield5" class="default-input"/>
                 <span class="checktip"></span>
             </div>
             <div class="login-more">

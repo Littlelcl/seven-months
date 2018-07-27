@@ -15,7 +15,7 @@
     <div class="login-top">七月放飞自我</div>
     <div class="login" id="login">
         <h3 class="login-title">用户登录</h3>
-        <form id="form1" name="form1" method="post" action="" autocomplete="off">
+        <form id="form1" method="post" action="/login" autocomplete="off">
             <div class="login-list">
                 <label for="textfield" class="default-text">输入账号</label>
                 <input type="text" name="phone"  class="default-input"/>
@@ -26,6 +26,7 @@
                 <input type="password" name="password"  class="default-input"/>
                 <span class="checktip"></span>
             </div>
+            {{ csrf_field() }}
             <div>
                 <input type="submit" name="button"  value="登录" class="submit-input"/>
             </div>
@@ -34,7 +35,7 @@
     </div>
     <div class="login hide" id="register">
         <h3 class="login-title">用户注册</h3>
-        <form id="form2" name="form1" method="post" action="" autocomplete="off">
+        <form id="form2"  method="post" action="/register" autocomplete="off">
             <div class="login-list">
                 <label for="textfield" class="default-text">手机号</label>
                 <input type="text" name="phone" id="textfield" class="default-input"/>
@@ -59,7 +60,7 @@
             </div>
             <div class="login-list">
                 <label for="textfield5" class="default-text">再次输入密码</label>
-                <input type="password" name="comfirm_password" id="textfield5" class="default-input"/>
+                <input type="password" name="password_confirmation" id="textfield5" class="default-input"/>
                 <span class="checktip"></span>
             </div>
             <div class="login-more">
@@ -67,9 +68,10 @@
                 <label for="checkbox"></label>
                 我已阅读并同意 <a href="#" target="_blank" class="c-blue">《电脑租赁平台注册协议》</a>
             </div>
+            {{ csrf_field() }}
             <div class="tc">
-                <a href="javascript:;" class="submit-input sign-btn">注册</a>
-                <!--<input type="submit" name="button" id="button" value="注册" class="submit-input sign-btn"/>-->
+                {{--<a href="javascript:;" class="submit-input sign-btn">注册</a>--}}
+                <input type="submit" name="button" id="button" value="注册" class="submit-input sign-btn"/>
             </div>
             <div class="no-user">已有账号？<a href="javascript:;" class="js-login">立即登录</a></div>
         </form>

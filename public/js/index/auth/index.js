@@ -60,6 +60,13 @@ $(".default-input").blur(function(){
     }  
 });
 
+$(document).ready(function () {
+    if($(".default-input").val()){
+        $(".default-input").siblings(".default-text").show();
+    } else {
+        $(".default-input").siblings(".default-text").hide();
+    }
+})
 
 $(".order-tab tr:even").css("background","#fafafa");
 

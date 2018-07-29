@@ -71,7 +71,7 @@
             {{ csrf_field() }}
             <div class="tc">
                 {{--<a href="javascript:;" class="submit-input sign-btn">注册</a>--}}
-                <input type="submit" name="button" id="button" value="注册" class="submit-input sign-btn"/>
+                <input type="submit" id="button" value="注册" class="submit-input sign-btn"/>
             </div>
             <div class="no-user">已有账号？<a href="javascript:;" class="js-login">立即登录</a></div>
         </form>

@@ -21,9 +21,22 @@ Route::post('register', 'Auth\RegisterController@register');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('admin/login', 'Auth\AdminController@showLoginForm')->name('adminLogin');
+Route::post('admin/login', 'Auth\AdminController@login');
+Route::post('admin/logout', 'Auth\AdminController@logout')->name('adminLogout');
+
 Route::group(
     [
         'namespace' => 'Index',
+        'middleware' => 'auth'
     ],function (){
    Route::get('', 'IndexController@index')->name('index');
+});
+
+Route::group(
+    [
+        'middleware' => ['auth:admin'],
+        'namespace' => 'Admin',
+    ], function() {
+    Route::get('admin/index', 'IndexController@index')->name('adminIndex');
 });

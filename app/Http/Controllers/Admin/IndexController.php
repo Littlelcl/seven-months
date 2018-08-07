@@ -10,6 +10,6 @@ class IndexController extends Controller
 {
     public function index()
     {
-        dd(Auth::guard('admin')->user(), Auth::user());
+        dd(Auth::guard('admin')->user(), Auth::guard('web')->user());
     }
 }

@@ -21,4 +21,6 @@ Route::group([
     'namespace' => 'Api',
 ],function (){
    Route::get('send/code', 'ServiceController@phoneSend')->name('phoneSend');
+
+    Route::get('ceshi', 'ServiceController@ceshi')->name('ceshi');
 });

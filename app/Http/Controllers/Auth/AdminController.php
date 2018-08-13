@@ -27,7 +27,7 @@ class AdminController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '';
+    protected $redirectTo = '/admin/index';
 
     /**
      * Create a new controller instance.
@@ -36,7 +36,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('adminLogout');
+        $this->middleware('guest:admin')->except('adminLogout');
     }
 
     /**
@@ -57,6 +57,21 @@ class AdminController extends Controller
     public function username()
     {
         return 'phone';
+    }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+        $request->session()->forget($this->guard()->getName());
+        $request->session()->regenerate();
+
+        return redirect('/admin/login');
     }
 
     /**

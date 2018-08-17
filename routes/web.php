@@ -27,6 +27,7 @@ Route::post('admin/logout', 'Auth\AdminController@logout')->name('adminLogout');
 
 Route::group(
     [
+        'namespace' => 'Index',
         'middleware' => ['auth:web']
     ],function (){
    Route::get('', 'IndexController@index')->name('index');

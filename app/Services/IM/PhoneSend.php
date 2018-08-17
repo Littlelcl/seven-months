@@ -2,11 +2,11 @@
 /**
  * Created by PhpStorm.
  * User: zhaozemin
- * Date: 2018/7/25
- * Time: 15:22
+ * Date: 2018/8/17
+ * Time: 15:10
  */
 
-namespace Lib\Service;
+namespace App\Services\IM;
 
 
 class PhoneSend

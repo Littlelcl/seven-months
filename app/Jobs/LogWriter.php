@@ -13,15 +13,28 @@ class LogWriter implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected  $queueName;
+    /**
+     * @param string $path
+     */
+    private  $path;
+    /**
+     * @param string $msg
+     */
+    private $msg;
+    /**
+     * @param array $data
+     */
+    private $data;
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct(string $queueName)
+    public function __construct(string $path = '', string $msg = '', array $data=[])
     {
-        $this->queueName = $queueName;
+        $this->path = $path;
+        $this->msg = $msg;
+        $this->data = $data;
     }
 
     /**
@@ -33,7 +46,7 @@ class LogWriter implements ShouldQueue
     {
         $monolog = Log::getMonolog();
         $monolog->popHandler();
-        Log::useDailyFiles(storage_path('logs/job/info.log'));
-        Log::info($this->queueName.microtime(true));
+        Log::useDailyFiles(storage_path($this->path));
+        Log::info($this->msg, $this->data);
     }
 }

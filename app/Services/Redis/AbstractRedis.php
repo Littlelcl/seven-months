@@ -19,5 +19,4 @@ abstract class AbstractRedis
         $this->redis = $redis;
     }
 
-
 }

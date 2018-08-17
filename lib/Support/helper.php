@@ -66,3 +66,4 @@ if (!function_exists('tableHash')) {
             return $res;
         }
     }
+}
